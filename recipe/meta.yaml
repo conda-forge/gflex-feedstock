@@ -11,7 +11,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - gflex = gflex:main
   script: "{{ PYTHON }} -m pip install . -vv"
@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - scipy
-    - matplotlib
+    - matplotlib-base
 
 test:
   imports:
