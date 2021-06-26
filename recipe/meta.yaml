@@ -1,20 +1,20 @@
 {% set name = "gflex" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://github.com/awickert/gFlex/archive/v{{ version }}.tar.gz
-  sha256: dc722606dbc6a549c84bc86849419bc43e4fcd9c0d8329984fe6fbf6b0b209d4
+  sha256: 021326e1d51dcac5dda69bde47ea8e08845cc016b37da423f3abba3cb42810ba
 
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - gflex = gflex:main
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -40,7 +40,7 @@ about:
   license: GPL-3.0-only
   license_family: GPL3
   license_file: LICENSE.md
-  summary: "One- and two-dimensional plate bending, designed for Earth's lithosphere"
+  summary: One- and two-dimensional plate bending, designed for Earth's lithosphere
 
 extra:
   recipe-maintainers:
